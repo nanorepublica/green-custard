@@ -1,0 +1,6 @@
+.container {
+  height: calc(100vh - 100px);
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
