@@ -11,7 +11,6 @@ export default class WordStats extends Component {
     this.state = {
       isProcessing: false,
       wordDataSet: {},
-      wordDataList: [],
     }
   }
 
@@ -41,32 +40,15 @@ export default class WordStats extends Component {
   }
 
   sortWordData() {
-    console.log(
-      "HELLO",
-      this.state.wordDataSet,
-      Object.entries(this.state.wordDataSet)
-      // .sort((a, b) => {
-      //   if (a[1] < b[1]) {
-      //     return -1
-      //   }
-      //   if (a[1] > b[1]) {
-      //     return 1
-      //   }
-      //   return 0
-      // })
-    )
-    this.setState({
-      wordDataList: Object.entries(this.state.wordDataSet).sort((a, b) => {
-        if (a[1] < b[1]) {
-          return -1
-        }
-        if (a[1] > b[1]) {
-          return 1
-        }
-        return 0
-      }),
+    return Object.entries(this.state.wordDataSet).sort((a, b) => {
+      if (a[1] < b[1]) {
+        return -1
+      }
+      if (a[1] > b[1]) {
+        return 1
+      }
+      return 0
     })
-    console.log("HELLO", this.state.wordDataSet)
   }
 
   componentDidMount() {
@@ -74,11 +56,11 @@ export default class WordStats extends Component {
   }
 
   render() {
-    this.sortWordData()
+    const wordList = this.sortWordData()
     return (
       <div className="word-container">
-        <WordTable wordData={this.state.wordDataList} />
-        <WordHist wordData={this.state.wordDataList.slice(0, 10)} />
+        <WordTable wordData={wordList} />
+        <WordHist wordData={wordList.slice(0, 10)} />
       </div>
     )
   }

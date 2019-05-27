@@ -1,0 +1,8 @@
+.table-container {
+  border-bottom: 1px #333 solid;
+  padding-bottom: 5px;
+}
+
+.table {
+  border: 1px solid #333;
+}

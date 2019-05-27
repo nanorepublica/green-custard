@@ -18,8 +18,9 @@ export default class WordTable extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.wordData.map(item => (
-              <tr>
+            {console.log(this.totalWordCount)}
+            {this.props.wordData.slice(0, 10).map(item => (
+              <tr key={item[0]}>
                 <td>{item[0]}</td>
                 <td>{item[1] / this.totalWordCount}</td>
               </tr>

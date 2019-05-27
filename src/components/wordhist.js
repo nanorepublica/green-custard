@@ -3,10 +3,10 @@ import React, { Component } from "react"
 export default class WordHist extends Component {
   render() {
     return (
-      <div className="class-name">
+      <div className="wordHist-container">
         {this.props.wordData.map(item => {
           return (
-            <div>
+            <div key={item[0]}>
               <span>{item[0]}</span>
               <span
                 style={{
