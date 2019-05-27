@@ -2,6 +2,10 @@
 
 ## To do
 
-- Finish Components (User journey)
-- Top Ten words
-- Styling
+- Bug, need to click 'select' twice for data to appear in wordstats component
+- Data needs sorting correctly
+- Table needs finishing off (percentage calc)
+- Table and Histogram needs data to flow through correctly
+- Proper Histogram and test it out!
+- Styling (Table & Histogram, improve look overall)
+- possible bug in the wordDataSet, some words contain spaces? (encoding?)

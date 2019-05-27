@@ -11,9 +11,7 @@ export default class PostList extends Component {
     }
   }
   componentDidMount() {
-    console.log(this.props)
     api.getPostsByUser(this.props.user.id).then(json => {
-      console.log(json)
       this.setState({ postList: json })
     })
   }
